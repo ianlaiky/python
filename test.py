@@ -427,3 +427,36 @@ db.commit()
 # db.execute('insert into subjects(subjects,students,classes) values(?,?,?)',("Science",80,12))
 #
 # db.commit()
+
+# try:
+#
+#     i = int(input("Enter an integer "))
+#     print(i)
+# except:
+#     print("Enter a number")
+
+#
+# givenNum = 10
+#
+# try:
+#     i = int(input("Enter number"))
+#     print("You enter ",i)
+#     if i == givenNum:
+#         print("Correct")
+#     else:
+#         print("Wrong!")
+# except:
+#     print("Please enter a number")
+
+input=[1,2,3,"a",4,5,"b",6,7,"c",-1]
+
+output=[]
+
+for i in input:
+    try:
+        if(int(i)):
+            output.append(i)
+    except:
+        pass
+
+print(output)
