@@ -448,15 +448,46 @@ db.commit()
 # except:
 #     print("Please enter a number")
 
-input=[1,2,3,"a",4,5,"b",6,7,"c",-1]
+# input=[1,2,3,"a",4,5,"b",6,7,"c",-1]
+#
+# output=[]
+#
+# for i in input:
+#     try:
+#         if(int(i)):
+#             pass
+#
+#     except:
+#         output.append(i)
+#
+# print(output)
+#
+# f = open('test.txt','w')
+# for i in range(6):
+#     f.write(str(i)+"\n")
+# f = open('test.txt','r')
+# r1 = f.readlines()
+# for u in r1:
+#     print(u)
+# for u in r1:
+#     print(u.strip())
+# f.close()
 
-output=[]
+# f = open('test.txt','w')
+#
+# a = db.execute('select * from subjects ORDER BY subjects')
+# print(a)
+# for i in a:
+#     f.write("{},{},{}\n".format(i[0],i[1],i[2]))
+# f.close()
 
-for i in input:
-    try:
-        if(int(i)):
-            output.append(i)
-    except:
-        pass
 
-print(output)
+import numpy as np
+
+a = [3,4,5,6]
+b = [6,5,4,3]
+print(a+b)
+
+a1=np.array(a)
+b1=np.array(b)
+print(a1+b1)
