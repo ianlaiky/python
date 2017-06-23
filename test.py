@@ -353,42 +353,77 @@
 # print(sq.caculateArea())
 
 
-class Employee():
-	count=0
-	def __init__(self,name,salary):
+# class Employee():
+# 	count=0
+# 	def __init__(self,name,salary):
 
-		self.name=name
-		self.salary=salary
-		Employee.count+=1
+# 		self.name=name
+# 		self.salary=salary
+# 		Employee.count+=1
 
-	def display(self):
-		return self.name+","+str(self.salary)
+# 	def display(self):
+# 		return self.name+","+str(self.salary)
 
-class FullTimeStaff(Employee):
-	def __init__(self,name,salary,leave):
-		super().__init__(name,salary)
-		self.leave=leave
-	def display(self):
-		return "{} , {} , {}".format(self.name,self.salary,self.leave)
+# class FullTimeStaff(Employee):
+# 	def __init__(self,name,salary,leave):
+# 		super().__init__(name,salary)
+# 		self.leave=leave
+# 	def display(self):
+# 		return "{} , {} , {}".format(self.name,self.salary,self.leave)
 
-		self.leave=leave
-class PartTimeStaff(Employee):
+# 		self.leave=leave
+# class PartTimeStaff(Employee):
 
-	def __init__(self,name,hourlyRate):
-		super().__init__(name,salary=0)
-		self.hourlyRate=hourlyRate
-	def display(self):
-		return "{},{}".format(self.name,self.hourlyRate)
+# 	def __init__(self,name,hourlyRate):
+# 		super().__init__(name,salary=0)
+# 		self.hourlyRate=hourlyRate
+# 	def display(self):
+# 		return "{},{}".format(self.name,self.hourlyRate)
 
-staff1 = FullTimeStaff("james",1520,5)
-staff2 = PartTimeStaff("tim",12)
-
+# staff1 = FullTimeStaff("james",1520,5)
+# staff2 = PartTimeStaff("tim",12)
 
 # print(staff1.display())
 # print(staff2.display())
 
+
+import sqlite3
+
+db = sqlite3.connect('test.db')
+db.commit()
+
+# Create table
+# db.execute('create table student(name text, rank int)')
+# db.commit()
+
+# db.execute('insert into student(name,rank) values(?,?)',('Jim',1))
+# db.execute('insert into student(name,rank) values(?,?)',('John',2))
+# db.execute('insert into student(name,rank) values(?,?)',('Tim',3))
+# db.commit()
+
+# Read Data
+# a = db.execute('select * from student order by rank')
+# db.commit()
+# for i in a:
+# 	print(i[0]+", "+str(i[1]))
+
+# Update Data
+# db.execute('update student set name=? where rank=?',('Tim',2))
+# db.commit()
+
+# delete
+# db.execute("delete from student where rank =2")
+# db.commit()
+
+# db.execute('create table subjects(subjects text, students int, classes int)')
+# db.commit()
 #
-# import sqlite3
+# db.execute('insert into subjects(subjects,students,classes) values(?,?,?)',("English",200,10))
 #
-# db = sqlite3.connect('test.db')
+# db.execute('insert into subjects(subjects,students,classes) values(?,?,?)',("Chinese",50,8))
+#
+# db.execute('insert into subjects(subjects,students,classes) values(?,?,?)',("Math",80,12))
+#
+# db.execute('insert into subjects(subjects,students,classes) values(?,?,?)',("Science",80,12))
+#
 # db.commit()
